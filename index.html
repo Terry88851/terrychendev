@@ -14,14 +14,35 @@
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-  <!-- Full-screen black hole (WebGL). Falls back to a CSS gradient if WebGL is unavailable. -->
+  <!-- Full-screen WebGL scene: singularity -> explosion -> Gargantua -->
   <canvas id="blackhole" aria-hidden="true"></canvas>
 
+  <!-- Appears after the explosion -->
+  <header class="nav">
+    <a class="nav__mark" href="#home">TC</a>
+    <nav class="nav__links" aria-label="Main">
+      <a href="#work">Work</a>
+      <a href="#about">About</a>
+      <a href="#experience">Experience</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+
   <main>
-    <section class="hero" id="home">
-      <div class="hero__content">
-        <h1 class="hero__name">Terry Chen</h1>
-        <p class="hero__tagline">Software Developer <span class="dot">•</span> Portfolio</p>
+    <!-- The intro is tall so scrolling drives the collapse. After the explosion it shrinks to one screen. -->
+    <section class="intro" id="home">
+      <div class="stage">
+        <div class="hero__content">
+          <h1 class="hero__name">Terry Chen</h1>
+          <p class="hero__tagline">Software Developer <span class="dot">•</span> Portfolio</p>
+        </div>
+
+        <div class="scroll-hint" aria-hidden="true">
+          <span>Scroll</span>
+          <i></i>
+        </div>
+
+        <button class="skip" type="button">Skip intro</button>
       </div>
     </section>
 
